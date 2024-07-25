@@ -21,6 +21,7 @@ jobs:
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"  
+
       - name: Set up Helm
         uses: azure/setup-helm@v3.5
         with:
@@ -30,3 +31,10 @@ jobs:
         uses: helm/chart-releaser-action@v1.5.0
         env:
           CR_TOKEN: "${{ secrets.HELM_RELEASE_TOKEN }}"
+        with:
+          charts_dir: ./nginx-chart  # specify the directory of your chart
+          packages_dir: .cr-release-packages
+          index_dir: .cr-index
+          pages_branch: gh-pages  # specify the branch for the index.yaml
+          owner: ${{ github.repository_owner }}
+          git_repo: ${{ github.repository }}
