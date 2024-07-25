@@ -32,7 +32,7 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.HELM_RELEASE_TOKEN }}"
         with:
-          charts_dir: .  # specify the root directory
+          charts_dir: .  # specify the root directory  little update
           packages_dir: .cr-release-packages
           index_dir: .cr-index
           pages_branch: gh-pages  # specify the branch for the index.yaml
