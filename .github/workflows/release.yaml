@@ -33,8 +33,6 @@ jobs:
           CR_TOKEN: "${{ secrets.HELM_RELEASE_TOKEN }}"
         with:
           charts_dir: ./nginx-chart  # specify the directory of your chart
-          packages_dir: .cr-release-packages
-          index_dir: .cr-index
           pages_branch: gh-pages  # specify the branch for the index.yaml
           owner: ${{ github.repository_owner }}
           git_repo: ${{ github.repository }}
