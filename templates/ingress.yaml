@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.name }}-ingress
+  # annotations:
+  #  cert-manager.io/cluster-issuer: "letsencrypt"
+spec:
+  ingressClassName: {{ .Values.ingress.className}}
+  # tls:
+  #   - hosts:
+  #       - bc-128-fe.play-nooax-ai-with.me
+  #     # secretName: letsencrypt-secret
+  rules:
+  - host: {{ .Values.ingress.host }}
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        path: /
+        backend:
+          service:
+            name: {{ .Values.name }}-service
+            port:
+              number: 80
+
+              # ingress:8080  svc port 8080: containerPort: 80
