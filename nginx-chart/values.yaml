@@ -1,25 +1,26 @@
 # Define All values of variable
-# Consider Development chart
-replicaCount: 1
-app: nginx-app
-name: nginx-app
+# Consider Staging chart
+replicaCount: 2
+app: nginx-app-03
+name: nginx-app-03
 image:
-  repository: nginx
-  pullPolicy: IfNotPresent
+  repository: somnathmore/custom-nginx:v3
+  pullPolicy: Never
 
   computeres:
     limits:
      cpu: "0.5"
-     memory: 1Gi
+     memory: 2Gi
     requests:
      cpu: "0.5"
-     memory: 1Gi
-     
+     memory: 2Gi
+
 ingress:
   className: nginx
   host: custom-nginx.codemaya.in
 
-
 serviceType: ClusterIP
 
 
+imagePullSecrets:
+  - my-docker-secret
