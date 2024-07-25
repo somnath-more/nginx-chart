@@ -3,6 +3,17 @@ entries:
   nginx-chart:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-07-25T08:04:13.167676163Z"
+    description: A Helm chart for Kubernetes
+    digest: 168978302b963d57397f56fc57626ea7dc6ce38cc466a30c86d0cb517f54f6a0
+    icon: https://example.com/path/to/icon.png
+    name: nginx-chart
+    type: application
+    urls:
+    - https://github.com/somnath-more/nginx-chart/releases/download/nginx-chart-0.1.5/nginx-chart-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-07-25T07:34:52.74655023Z"
     description: A Helm chart for Kubernetes
     digest: 39c4a7ced2f315d0a3ffa2c546d4e703705bbad46ca79105faae88ea9ace073a
@@ -56,4 +67,4 @@ entries:
     urls:
     - https://github.com/somnath-more/nginx-chart/releases/download/nginx-chart-0.1.0/nginx-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-25T07:34:52.746579274Z"
+generated: "2024-07-25T08:04:13.167704937Z"
