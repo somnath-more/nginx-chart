@@ -1,8 +1,8 @@
 # Define All values of variable
 # Consider Staging chart
-replicaCount: 2
-app: nginx-app-03
-name: nginx-app-03
+replicaCount: 1
+app: nginx-app-04
+name: nginx-app-04
 image:
   repository: somnathmore/custom-nginx:v3
   pullPolicy: Never

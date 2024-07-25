@@ -1,6 +1,6 @@
 # Define All values of variable
 # Consider Staging chart
-replicaCount: 2
+replicaCount: 1
 app: nginx-app-02
 name: nginx-app-02
 image:
