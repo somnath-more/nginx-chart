@@ -1,10 +1,10 @@
 # Define All values of variable
 # Consider Staging chart
 replicaCount: 1
-app: nginx-app-04
-name: nginx-app-04
+app: custom-nginx-app-10
+name: custom-nginx-app-10
 image:
-  repository: somnathmore/custom-nginx:v3
+  repository: somnathmore/custom-nginx:v2
   pullPolicy: Never
 
   computeres:
@@ -23,4 +23,4 @@ serviceType: ClusterIP
 
 
 imagePullSecrets:
-  - my-docker-secret
+  - my-ghcr-secret
